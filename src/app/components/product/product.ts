@@ -16,11 +16,24 @@ export class Product {
   public precio: number;
   public descripcion: string;
 
+  //El componente nace
   constructor() {
     this.name = 'PC portatil 1';
     this.marca = 'Dell';
     this.precio = 1000;
     this.descripcion = 'Portátil con procesador i7 y 16GB de RAM';
     console.log('se ha cargado el componente product');
+  }
+  //El componente arranca
+  ngOnInit() {
+    console.log('se ha inicializado el componente product');
+  }
+
+  ngDoCheck() {
+    console.log('se ha cambiado el componente product');
+  }
+
+  cambiarNombre() {
+    this.name = 'PC portatil 2';
   }
 }

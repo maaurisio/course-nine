@@ -25,4 +25,20 @@ export class MiPerfil {
     this.telefono = 1234567890;
     console.log('Se cargó el componente de perfil correctamente.');
   }
+
+  ngOnInit() {
+    console.log('Se ha inicializado el componente de perfil.');
+  }
+
+  ngDoCheck() {
+    console.log('Se ha detectado un cambio en el componente de perfil.');
+  }
+
+  cambiarEdad(){
+    this.edad = '31 años';
+  }
+
+  cambiarDireccion(){
+    this.direccion = 'Otra Dirección 456, Ciudad, País';
+  }
 }
