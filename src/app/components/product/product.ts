@@ -1,8 +1,11 @@
 import { Component } from '@angular/core';
+import { Pelicula } from '../pelicula/pelicula';
+import { Usuario } from '../usuario/usuario';
+import { Ventas } from '../ventas/ventas';
 
 @Component({
   selector: 'app-product',
-  imports: [],
+  imports: [Pelicula, Usuario, Ventas],
   templateUrl: './product.html',
   styleUrl: './product.css',
 })
@@ -13,7 +16,7 @@ export class Product {
   public precio: number;
   public descripcion: string;
 
-  constructor(){
+  constructor() {
     this.name = 'PC portatil 1';
     this.marca = 'Dell';
     this.precio = 1000;

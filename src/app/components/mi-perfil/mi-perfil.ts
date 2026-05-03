@@ -1,8 +1,11 @@
 import { Component } from '@angular/core';
+import { Prestamos } from '../prestamos/prestamos';
+import { Transacciones } from '../transacciones/transacciones';
+import { Cuenta } from '../cuenta/cuenta';
 
 @Component({
   selector: 'app-mi-perfil',
-  imports: [],
+  imports: [Cuenta, Transacciones, Prestamos],
   templateUrl: './mi-perfil.html',
   styleUrl: './mi-perfil.css',
 })
