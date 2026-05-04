@@ -10,7 +10,11 @@ ng generate component components/cuenta (.renombrar)
 
 
 ## glosario:
-constructor → crea el componente
-ngOnInit → carga datos
-ngOnChanges → detecta cambios en inputs
-ngDoCheck → revisa cambios constantemente
+El componente tiene “momentos de vida”:
+
+se crea → constructor
+se crea → constructor
+se inicia → ngOnInit
+cambia → ngOnChanges
+se revisa → ngDoCheck
+ngAfterViewInit → vista ya cargada/manipular

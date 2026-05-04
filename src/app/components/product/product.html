@@ -2,5 +2,28 @@
 <p>{{ descripcion }}</p>
 <p>de marca {{ marca }}</p>
 <strong>{{ precio }}</strong>
-
+<br>
+<br>
 <button (click)="cambiarNombre()">Cambiar Nombre del producto</button>
+<br>
+<br>
+
+@if(mostrar_pelicula == true) {
+  <button (click)="ocultarPelicula(false)">Ocultar componente de Película</button>
+}@else {
+  <button (click)="ocultarPelicula(true)">Mostrar componente de Película</button>
+}
+@if(mostrar_pelicula == true) {
+  <app-pelicula></app-pelicula>
+}
+<br>
+<br>
+
+@if(mostrar_cuenta == true) {
+  <button (click)="ocultarCuenta(false)">Ocultar componente de Cuenta</button>
+}@else {
+  <button (click)="ocultarCuenta(true)">Mostrar componente de Cuenta</button>
+}
+@if(mostrar_cuenta == true) {
+  <app-cuenta></app-cuenta>
+}

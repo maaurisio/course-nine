@@ -6,4 +6,12 @@ import { Component } from '@angular/core';
   templateUrl: './pelicula.html',
   styleUrl: './pelicula.css',
 })
-export class Pelicula {}
+export class Pelicula {
+  ngOnInit(){
+    console.log("el componente de pelicula esta INICIANDO")
+  }
+
+  ngOnDestroy(){
+    console.log("el componente de pelicula esta DESTRUYENDO")
+  }
+}
