@@ -1,0 +1,28 @@
+a{
+    background-color: #ec9e0e;
+    color: #000000;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+button{
+    padding: 15px;
+    font-size: 14px;
+    border-radius: 10px;
+    border: none;
+    background-color: #f0f0f0;
+    color: #000000;
+    transition: all 0.2s ease;
+}
+
+button.activo{
+    background-color: #1106e0;
+    color: #ffffff;
+    font-size: 18px;
+}
+
+.activo{
+    background-color: #1106e0;
+    color: #ffffff;
+    padding: 15px;
+}

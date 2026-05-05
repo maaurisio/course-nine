@@ -6,4 +6,15 @@ import { Component } from '@angular/core';
   templateUrl: './prestamos.html',
   styleUrl: './prestamos.css',
 })
-export class Prestamos {}
+export class Prestamos {
+  web = 'https://youtube.com';
+  redirigir = false;
+
+  cambioRedireccion() {
+    if (this.redirigir == false) {
+      this.redirigir = true;
+    } else {
+      this.redirigir = false;
+    }
+  }
+}

@@ -1,1 +1,20 @@
-<p>usuario works!</p>
+<h1>Plantillas en Angular</h1>
+
+
+<p>Web: {{ web }}</p>
+
+
+
+<a [href]="web" 
+[class.existe]="redirigir"
+target="_blank">ir a la web</a>
+
+<h2>estructura de control de flujo</h2>
+
+@if (redirigir == true) {
+  <p>el enlace {{ web }} es correcto</p>
+} @else {
+    <p>el enlace {{ web }} no va a funcionar</p>
+}
+
+<button (click)="cambioRedireccion()">Cambiar redirección</button>

@@ -1,10 +1,9 @@
 import { Component, signal } from '@angular/core';
-import { Product } from './components/product/product';
-import { MiPerfil } from './components/mi-perfil/mi-perfil';
+import { Prestamos } from './components/prestamos/prestamos';
 
 @Component({
   selector: 'app-root',
-  imports: [ Product, MiPerfil],
+  imports: [ Prestamos ],
   templateUrl: './app.html',
   styleUrl: './app.css',
 })
