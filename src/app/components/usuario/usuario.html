@@ -5,16 +5,27 @@
 
 
 
-<a [href]="web" 
-[class.existe]="redirigir"
-target="_blank">ir a la web</a>
+<a [href]="web" [class.existe]="redirigir" target="_blank">ir a la web</a>
 
 <h2>estructura de control de flujo</h2>
 
 @if (redirigir == true) {
-  <p>el enlace {{ web }} es correcto</p>
+<p>el enlace {{ web }} es correcto</p>
 } @else {
-    <p>el enlace {{ web }} no va a funcionar</p>
+<p>el enlace {{ web }} no va a funcionar</p>
 }
 
 <button (click)="cambioRedireccion()">Cambiar redirección</button>
+<br>
+<br>
+<h3>MARCAS DE AUTOS</h3>
+
+<ul>
+  @for(marca of marcasAutos; track marca.id;
+  let indice = $index, contador = $count,
+  par = $even, impar = $odd){
+  <li>{{ marca.nombre }}</li>
+  }@empty {
+  <li>No hay marcas de autos</li>
+  }
+</ul>

@@ -26,3 +26,13 @@ button.activo{
     color: #ffffff;
     padding: 15px;
 }
+
+li.aprobado {
+    color: #0b6623;
+    font-weight: 700;
+}
+
+li.pendiente {
+    color: #b00020;
+    font-weight: 700;
+}

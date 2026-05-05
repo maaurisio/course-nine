@@ -10,6 +10,14 @@ export class Prestamos {
   web = 'https://youtube.com';
   redirigir = false;
 
+  prestamosList = [
+    {id: 1, monto: 1000, estado: 'aprobado'},
+    {id: 2, monto: 2000, estado: 'pendiente'},
+    {id: 3, monto: 1500, estado: 'aprobado'},
+    {id: 4, monto: 3000, estado: 'aprobado'},
+    {id: 5, monto: 2500, estado: 'pendiente'},
+  ]
+
   cambioRedireccion() {
     if (this.redirigir == false) {
       this.redirigir = true;

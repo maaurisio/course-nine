@@ -13,3 +13,18 @@ target="_blank">ir a la web</a>
 }
 
 <button [class.activo]="redirigir" (click)="cambioRedireccion()">Cambiar Redirección</button>
+
+<br>
+<br>
+
+<ul>
+  @for(prestamo of prestamosList; track prestamo.id;
+  let indice = $index, contador = $count,
+  par = $even, impar = $odd){
+  <li [class.aprobado]="prestamo.estado === 'aprobado'" [class.pendiente]="prestamo.estado === 'pendiente'">
+    {{ prestamo.monto }} - {{ prestamo.estado }}
+  </li>
+  }@empty {
+  <li>No hay préstamos disponibles</li>
+  }
+</ul>
