@@ -29,3 +29,16 @@
   <li>No hay marcas de autos</li>
   }
 </ul>
+
+ @switch (usuario.rol) {
+  @case ('admin') {
+    <p>El usuario {{ usuario.nombre }} es un administrador</p>
+    <app-ventas></app-ventas>
+  }
+  @case ('user') {
+    <p>El usuario {{ usuario.nombre }} es un usuario común</p>
+  }
+  @default {
+    <p>El usuario {{ usuario.nombre }} tiene un rol invitado</p>
+  }
+ }
