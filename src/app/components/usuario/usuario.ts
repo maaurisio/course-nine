@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 import { Ventas } from '../ventas/ventas';
+import {UpperCasePipe, LowerCasePipe, DatePipe, TitleCasePipe, SlicePipe, CurrencyPipe} from '@angular/common';
 
 @Component({
   selector: 'app-usuario',
-  imports: [Ventas],
+  imports: [Ventas, UpperCasePipe, LowerCasePipe, DatePipe, TitleCasePipe, SlicePipe, CurrencyPipe],
   templateUrl: './usuario.html',
   styleUrl: './usuario.css',
 })

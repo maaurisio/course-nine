@@ -30,15 +30,37 @@
   }
 </ul>
 
- @switch (usuario.rol) {
-  @case ('admin') {
-    <p>El usuario {{ usuario.nombre }} es un administrador</p>
-    <app-ventas></app-ventas>
-  }
-  @case ('user') {
-    <p>El usuario {{ usuario.nombre }} es un usuario común</p>
-  }
-  @default {
-    <p>El usuario {{ usuario.nombre }} tiene un rol invitado</p>
-  }
- }
+@switch (usuario.rol) {
+@case ('admin') {
+<p>El usuario {{ usuario.nombre }} es un administrador</p>
+<app-ventas></app-ventas>
+}
+@case ('user') {
+<p>El usuario {{ usuario.nombre }} es un usuario común</p>
+}
+@default {
+<p>El usuario {{ usuario.nombre }} tiene un rol invitado</p>
+}
+}
+
+<ng-container>
+  <h1>Contenido dentro de un ng-container</h1>
+</ng-container>
+
+@let pais = 'Ecuador';
+
+@let saludo = 'saludos desde' + pais;
+
+//defer
+
+<h2>TUBERIAS - PIPELINES</h2>
+
+{{web | titlecase}}
+<br>
+{{web | lowercase}}
+<br>
+{{web | uppercase}}
+<br>
+{{web | slice: 0:5}}
+<br>
+{{ 6587 | currency:'USD': 'symbol':'1.2-2' }}
