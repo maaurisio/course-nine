@@ -1,16 +1,20 @@
 import { Component } from '@angular/core';
 import { Ventas } from '../ventas/ventas';
 import {UpperCasePipe, LowerCasePipe, DatePipe, TitleCasePipe, SlicePipe, CurrencyPipe} from '@angular/common';
+import { CambiaLetras } from '../../pipes/cambiaLetras';
+import { LetrasToASCII } from '../../pipes/letrasToASCII';
 
 @Component({
   selector: 'app-usuario',
-  imports: [Ventas, UpperCasePipe, LowerCasePipe, DatePipe, TitleCasePipe, SlicePipe, CurrencyPipe],
+  imports: [LetrasToASCII, CambiaLetras, Ventas, UpperCasePipe, LowerCasePipe, DatePipe, TitleCasePipe, SlicePipe, CurrencyPipe],
   templateUrl: './usuario.html',
   styleUrl: './usuario.css',
 })
 export class Usuario {
   web = 'https://amazon.com';
   redirigir = false;
+
+  fecha = new Date();
 
   marcasAutos = [
     { id: 1, nombre: 'Toyota' },
