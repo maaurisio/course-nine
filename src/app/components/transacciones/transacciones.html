@@ -1,1 +1,10 @@
-<p>transacciones works!</p>
+<hr>
+<h1>Transacciones</h1>
+<ul>
+    @for(transaccion of transacciones; track transaccion.id){
+      <li>{{transaccion.descripcion}} - {{transaccion.monto}} - {{transaccion.tipo}}</li>
+
+    }
+</ul>
+
+

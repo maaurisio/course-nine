@@ -1,5 +1,8 @@
 ##crear component
-ng generate component components/cuenta (.renombrar)
+ng generate component components/cine (.renombrar)
+
+## crear pipe
+ng generate pipe traducir
 
 
 
@@ -18,3 +21,4 @@ se inicia → ngOnInit
 cambia → ngOnChanges
 se revisa → ngDoCheck
 ngAfterViewInit → vista ya cargada/manipular
+
