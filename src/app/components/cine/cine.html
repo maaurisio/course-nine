@@ -2,8 +2,28 @@
 <h1>{{ titulo }}</h1>
 
 <ul>
-    @for(pelicula of peliculas; track pelicula.id){
-      <li>{{pelicula.titulo}} - {{pelicula.genero}} - {{pelicula.director}}</li>
+  @for(pelicula of peliculas; track pelicula.id){
+  <li>{{pelicula.titulo}} - {{pelicula.genero}} - {{pelicula.director}}</li>
 
-    }
+  }
+</ul>
+
+TWO WAY DATA BINDING
+<h1>Formulario y two way data binding</h1>
+
+<input type="text" [(ngModel)]="miPelicula" placeholder="Escribe el título de tu película favorita">
+
+<button (click)="showPelicula()">Mostrar Pelicula</button>
+
+<button (click)="addPelicula()">Agregar Pelicula</button>
+
+<p><strong>Mi pelicula es: {{ miPelicula }}</strong></p>
+
+<h2>Listado de peliculas simples</h2>
+
+<ul>
+  @for(pelicula of peliculaSinDatos; track pelicula){
+  <li>{{pelicula}}</li>
+
+  }
 </ul>

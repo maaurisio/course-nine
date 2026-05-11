@@ -22,3 +22,6 @@ cambia → ngOnChanges
 se revisa → ngDoCheck
 ngAfterViewInit → vista ya cargada/manipular
 
+
+TWO WAY DATA BINDING
+binding bidireccional
