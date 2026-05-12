@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { Pelicula } from '../../models/pelicula';
 import { FormsModule } from '@angular/forms';
+import { NgStyle } from '@angular/common';
 
 @Component({
   selector: 'app-cine',
   standalone: true,
-  imports: [FormsModule],
+  imports: [FormsModule, NgStyle],
   templateUrl: './cine.html',
   styleUrl: './cine.css',
 })
@@ -17,6 +18,8 @@ export class Cine {
 
   //para trabajar con el formulario y binding bidireccional
   public miPelicula: string = '';
+
+  public color: string = '#ffffff';
 
   constructor() {
     this.titulo = "Modelos";
@@ -33,9 +36,10 @@ export class Cine {
     console.log(this.peliculas);
   }
 
-  ngDoCheck() {
+  /*ngDoCheck() {
     console.log(this.miPelicula);
   }
+  */
 
   showPelicula() {
     alert(this.miPelicula);
@@ -47,5 +51,20 @@ export class Cine {
     let nuevapelicula = new Pelicula(identificador, this.miPelicula);
     console.log(nuevapelicula);
     this.peliculas.push(nuevapelicula);
+  }
+
+  deletePelicula(indice: number) {
+    this.peliculas.splice(indice, 1);
+  }
+
+  haciendoFoco() {
+    console.warn("Estas dentro del input de pelicula");
+  }
+  saliendoDelFoco() {
+    console.warn("Estas fuera del input de pelicula");
+  }
+
+  pulsandoTeclas(event: KeyboardEvent) {
+    console.info("Estas pulsando la tecla: " + event.key);
   }
 }

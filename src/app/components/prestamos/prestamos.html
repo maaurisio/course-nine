@@ -35,7 +35,8 @@ target="_blank">ir a la web</a>
   }
   @case ('hipotecario') {
     <p>El préstamo es de tipo hipotecario con un interés de {{ prestamo.interes }}%</p>
-    <app-transacciones></app-transacciones>
+    
+    <!--<app-transacciones></app-transacciones> -->
   }
   @case ('vehicular') {
     <p>El préstamo es de tipo vehicular
@@ -44,3 +45,11 @@ target="_blank">ir a la web</a>
     <p>El préstamo tiene un tipo desconocido</p>
   }
 }
+<br>
+<ul>
+  @for(prestamo of prestamosList; track prestamo.id; let indice = $index){
+  <li>{{prestamo.id}} - {{prestamo.monto}} - {{prestamo.estado}}<button (click)="deletePrestamo(indice)">Borrar Préstamo</button></li>
+  }
+</ul>
+
+<button (click)="addPrestamo()">Agregar Préstamo</button>

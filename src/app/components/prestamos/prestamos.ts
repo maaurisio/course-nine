@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 import { Transacciones } from '../transacciones/transacciones';
+import { NgStyle } from '@angular/common';
 
 @Component({
   selector: 'app-prestamos',
-  imports: [Transacciones],
+  imports: [Transacciones, NgStyle],
   templateUrl: './prestamos.html',
   styleUrl: './prestamos.css',
 })
@@ -31,5 +32,15 @@ export class Prestamos {
     } else {
       this.redirigir = false;
     }
+  }
+
+  deletePrestamo(indice: number) {
+    this.prestamosList.splice(indice, 1);
+  }
+
+  addPrestamo() {
+    let identificador = this.prestamosList[this.prestamosList.length - 1].id + 1;
+    let nuevoPrestamo = {id: identificador, monto: 4000, estado: 'pendiente'};
+    this.prestamosList.push(nuevoPrestamo);
   }
 }

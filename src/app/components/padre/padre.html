@@ -1,0 +1,12 @@
+<hr>
+<h1>COMPONENTE PADRE</h1>
+<p>en este componente se puede comunicar con su componente hijo</p>
+
+<p>Hijo:</p>
+{{saludoRecibido}}
+
+<!-- Todo debe estar dentro de la etiqueta de apertura <app-hijo ... > -->
+<app-hijo 
+    [elNombrePadre]="nombrePadre" 
+    (saludoHijo)="recibirSaludoHijo($event)">
+</app-hijo>
