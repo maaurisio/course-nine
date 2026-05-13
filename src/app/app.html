@@ -1,9 +1,9 @@
-{{titulo}}
+<!-- {{titulo}}
 <br>
 {{descripcion}}
-
+-->
 <!-- <app-product></app-product>-->
-<!-- <app-mi-perfil></app-mi-perfil> -->
+<!--<app-mi-perfil></app-mi-perfil>-->
 
 <!-- <app-usuario></app-usuario>-->
 
@@ -11,4 +11,23 @@
 <!-- <app-cine></app-cine>-->
 <!-- <app-transacciones></app-transacciones>-->
 <!-- <app-cuenta></app-cuenta>  -->
-<app-padre></app-padre>
+<!-- <app-padre></app-padre> -->
+
+<hr>
+    <a routerLink="/inicio">Inicio</a>&nbsp;|&nbsp;
+    <a routerLink="/cuenta" routerLinkActive="activo">Cuenta</a>&nbsp;|&nbsp;
+    <a routerLink="/transacciones" routerLinkActive="activo">Transacciones</a>&nbsp;|&nbsp;
+    <a routerLink="/prestamos" routerLinkActive="activo">Prestamos</a>&nbsp;|&nbsp;
+    
+    <a routerLink="/cine">Cine</a>&nbsp;|&nbsp;
+    <a routerLink="/componentes" routerLinkActive="activarLink">Componentes</a>&nbsp;|&nbsp;
+    <a routerLink="/ciclo" routerLinkActive="activarLink">hooks</a>&nbsp;|&nbsp;
+    <a routerLink="/plantillas" routerLinkActive="activarLink" >Plantillas</a>&nbsp;|&nbsp;
+    <a routerLink="/directivas" routerLinkActive="activarLink">Directivas</a>&nbsp;|&nbsp;
+    <a routerLink="/modelos" routerLinkActive="activarLink">Modelos</a>&nbsp;|&nbsp;
+    <a routerLink="/comunicacion" routerLinkActive="activarLink">Comunicación</a>
+<hr>
+<router-outlet>
+    <!-- aqui va el componente vinculado a la ruta actual -->
+    
+</router-outlet>

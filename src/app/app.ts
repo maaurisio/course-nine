@@ -6,10 +6,12 @@ import { Cine } from './components/cine/cine';
 import { Transacciones } from './components/transacciones/transacciones';
 import { Cuenta } from './components/cuenta/cuenta';
 import { Padre } from './components/padre/padre';
+import { MiPerfil } from './components/mi-perfil/mi-perfil';
+import { RouterLink, RouterOutlet, RouterLinkActive } from '@angular/router';
 
 @Component({
   selector: 'app-root',
-  imports: [ Padre],
+  imports: [RouterOutlet, RouterLink, RouterLinkActive],
   templateUrl: './app.html',
   styleUrl: './app.css',
 })

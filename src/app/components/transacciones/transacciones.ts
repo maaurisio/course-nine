@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { TransaccionesModel } from '../../models/transacciones';
 import { FormsModule } from '@angular/forms';
 
@@ -13,6 +13,7 @@ export class Transacciones {
   
   public descripcionTransaccion : string = '';
 
+
   constructor() {
     this.transacciones = [
       new TransaccionesModel(1, new Date('2024-01-15'), 'Compra en supermercado', 150.75, 'Gasto'),
@@ -25,5 +26,14 @@ export class Transacciones {
 
   showTransaccion() {
     alert(this.descripcionTransaccion);
+  }
+
+  @Output() mensajeEnviado = new EventEmitter();
+
+  enviarSaludo() {
+    // El setTimeout envía la ejecución al final de la cola
+    setTimeout(() => {
+      this.mensajeEnviado.emit('hola, desde transacciones');
+    }, 0);
   }
 }

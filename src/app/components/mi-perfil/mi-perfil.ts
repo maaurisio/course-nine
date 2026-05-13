@@ -17,7 +17,11 @@ export class MiPerfil {
   public direccion: string;
   public telefono: number;
 
-  constructor(){
+  public nombreCliente = 'Juan Pérez';
+
+  public mensajeRecibido: string = '';
+
+  constructor() {
     this.name = 'Juan Pérez';
     this.edad = '30 años';
     this.ocupacion = 'Desarrollador de Software';
@@ -34,11 +38,15 @@ export class MiPerfil {
     console.log('Se ha detectado un cambio en el componente de perfil.');
   }
 
-  cambiarEdad(){
+  cambiarEdad() {
     this.edad = '31 años';
   }
 
-  cambiarDireccion(){
+  cambiarDireccion() {
     this.direccion = 'Otra Dirección 456, Ciudad, País';
+  }
+
+  recibirMensaje(mensaje: string) {
+    this.mensajeRecibido = mensaje;
   }
 }

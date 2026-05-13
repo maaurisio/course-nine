@@ -1,3 +1,4 @@
+<!--
 <p>{{ name }}</p>
 <p>{{ edad }}</p>
 <p>{{ ocupacion }}</p>
@@ -7,6 +8,14 @@
 <app-cuenta></app-cuenta>
 <app-transacciones></app-transacciones>
 <app-prestamos></app-prestamos>
-
 <button (click)="cambiarEdad()">Cambiar Edad</button>
 <button (click)="cambiarDireccion()">Cambiar Dirección</button>
+-->
+
+<app-cuenta [nombreCliente]="nombreCliente">
+</app-cuenta>
+
+<app-transacciones (mensajeEnviado)="recibirMensaje($event)">
+</app-transacciones>
+
+<p>{{ mensajeRecibido }}</p>
